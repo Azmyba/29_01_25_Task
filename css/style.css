@@ -1,0 +1,227 @@
+/* General layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Task 20: creative enhancement – background gradient */
+    background: linear-gradient(180deg, #eef2ff 0%, #f9fafb 100%);
+}
+
+/* Container helper */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ===== Task 3: Header styling ===== */
+.site-header {
+    background-color: #0f172a;      /* hex */
+    color: #f9fafb;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+.site-header h1 {
+    margin: 0 0 0.4rem;
+    font-size: 2rem;
+}
+.site-header p {
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
+}
+
+/* ===== Task 4: Navigation bar ===== */
+/* Task 16: RGB color format used here */
+.main-nav {
+    background-color: rgb(31, 41, 55); /* rgb */
+}
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.main-nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+}
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+/* ===== Task 5: Hero section ===== */
+.hero {
+    position: relative;
+    min-height: 50vh;
+    background: url("../images/banner.jpg") center/cover no-repeat;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+}
+.hero-content {
+    position: relative;
+    padding: 4rem 1rem;
+    text-align: center;
+    color: #f9fafb;
+}
+.hero-content h2 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+.hero-content p {
+    margin: 0.5rem 0 0;
+}
+
+/* ===== Task 20: Button hover animation ===== */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.1rem;
+    border-radius: 999px;
+    border: none;
+    background-color: #1d4ed8;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.3);
+}
+
+/* ===== Task 7: Skills list with custom bullets ===== */
+/* Task 16: named color 'teal' used here */
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+}
+.skills-list li {
+    margin: 0.4rem 0;
+    padding-left: 1.3rem;
+    position: relative;
+}
+.skills-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: teal;          /* named color */
+    font-size: 1.1rem;
+}
+
+/* ===== Task 8 + 18: Table styling ===== */
+.table-wrap {
+    overflow-x: auto;
+}
+.cert-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.cert-table caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.cert-table th,
+.cert-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.6rem;
+}
+.cert-table thead th {
+    background-color: #e5e7eb;
+}
+.cert-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* ===== Task 17: Quotation styling ===== */
+.quote {
+    border-left: 4px solid #1d4ed8;
+    padding: 1rem;
+    background-color: #e5edff;
+    font-style: italic;
+}
+
+/* ===== Task 9: Portfolio grid ===== */
+.portfolio-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.portfolio-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.portfolio-grid figcaption {
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+}
+
+/* ===== Task 10: External resource links ===== */
+.resources {
+    line-height: 1.8;
+}
+.resources a {
+    color: #1d4ed8;
+    text-decoration: none;
+    border-bottom: 1px dashed #93c5fd;
+}
+.resources a:hover {
+    border-bottom-style: solid;
+}
+
+/* ===== Task 11: Contact form styling ===== */
+.contact-form {
+    max-width: 600px;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 0.8rem;
+    font: inherit;
+}
+/* Task 16: named color again in focus outline */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 3px solid teal;
+    outline-offset: 2px;
+}
+
+/* ===== Task 12: Footer styling ===== */
+.site-footer {
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.85rem;  /* smaller text */
+    color: #6b7280;
+    background-color: #ffffffcc;
+}
+.site-footer a {
+    color: #1d4ed8;
+}
+
+/* Small responsive tweak */
+@media (max-width: 600px) {
+    .hero-content {
+        padding: 3rem 1rem;
+    }
+}
