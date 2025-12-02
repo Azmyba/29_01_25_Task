@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Task 1: Boilerplate + basic meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title reflecting exam purpose -->
+    <title>HTML/CSS Exam – Portfolio of Aikoz Bazarbayeva</title>
+
+    <!-- Task 2: Metadata -->
+    <meta name="author" content="Aikoz Bazarbayeva">
+    <meta name="description" content="HTML/CSS exam webpage demonstrating semantic HTML, CSS styling, layout, and accessibility.">
+
+    <!-- Task 14: Internal CSS for basic font + colors -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #111827;              /* hex color */
+            background-color: #f3f4f6;   /* base color; later overridden by gradient in external CSS */
+        }
+        h1, h2 {
+            color: #1f2937;
+        }
+        .section {
+            padding: 2rem 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <!-- Task 15: External stylesheet for main layout, spacing, and design -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Task 3: Header - name, program, location -->
+    <header class="site-header">
+        <div class="container">
+            <h1>
+                <!-- Task 13: Inline CSS applied to only this span -->
+                Aikoz <span style="color: teal;">Bazarbayeva</span>
+            </h1>
+            <!-- Inline CSS is not recommended for large projects because it scatters styles in HTML,
+                 makes maintenance harder, and prevents reusing styles efficiently. It is better to keep
+                 most styling in external CSS files. -->
+            <p>Study program: Information Systems</p>
+            <p>Location: Riga, Latvia</p>
+        </div>
+    </header>
+
+    <!-- Task 4: Navigation bar with major sections -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Task 5: Hero section with background image + centered text -->
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content container">
+                <h2>Welcome to my HTML/CSS exam page</h2>
+                <p>Clean structure • Semantic HTML • Modern CSS</p>
+                <a href="#portfolio" class="btn">View my projects</a>
+            </div>
+        </div>
+    </section>
+    <!-- Task 20: Creative enhancement note:
+         The body background gradient and button hover animation are implemented in css/style.css. -->
+
+    <!-- Task 6: About section with semantic tags and formatting -->
+    <section id="about" class="section">
+        <h2>About</h2>
+        <p>
+            I am <strong>Aikoz</strong>, a student of <em>Information Systems</em> who enjoys building
+            clean and accessible web interfaces. I focus on writing semantic HTML that is friendly for both
+            users and <abbr title="Search Engine Optimization">SEO</abbr>, and I like experimenting with
+            modern CSS techniques to create responsive layouts.
+        </p>
+    </section>
+
+    <!-- Task 7: Unordered list of personal/technical skills -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>Semantic HTML5 & basic accessibility</li>
+            <li>CSS layouts (Flexbox, responsive design)</li>
+            <li>Basic JavaScript for interactivity</li>
+            <li>Git & GitHub version control</li>
+        </ul>
+    </section>
+
+    <!-- Task 8 + Task 18: Table of certifications with caption, thead, tbody, colspan, rowspan, colgroup -->
+    <section class="section">
+        <h2>Certifications &amp; Achievements</h2>
+        <div class="table-wrap">
+            <table class="cert-table">
+                <caption>Selected professional milestones</caption>
+
+                <colgroup>
+                    <col span="1" style="width: 40%;">
+                    <col span="1" style="width: 25%;">
+                    <col span="1" style="width: 15%;">
+                    <col span="1" style="width: 20%;">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>Certificate / Title</th>
+                        <th>Issuer</th>
+                        <th>Year</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Cisco Networking Academy – Introduction</td>
+                        <td>Cisco</td>
+                        <td>2025</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <!-- merged cells explaining details -->
+                        <td colspan="3">Focus: networking basics, security, and best practices</td>
+                    </tr>
+                    <tr>
+                        <td>HTML &amp; CSS Basics</td>
+                        <td>edX</td>
+                        <td>2023</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>Digital Skills for Work</td>
+                        <td>Google</td>
+                        <td>2024</td>
+                        <td>Completed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Task 17: Blockquote + inline quote -->
+    <section class="section">
+        <h2>Inspiration</h2>
+        <figure class="quote">
+            <blockquote cite="https://www.w3.org/TR/html52/">
+                “The web’s <q>universality</q> is essential to its success.”
+            </blockquote>
+            <figcaption>— W3C HTML Specification</figcaption>
+        </figure>
+    </section>
+
+    <!-- Task 9: Portfolio section with two projects (image + caption) -->
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <figure>
+                <img src="images/banner.jpg" alt="Sample responsive hero banner with overlay text">
+                <figcaption>Responsive hero section</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/logo.png" alt="Simple personal logo used for branding the website">
+                <figcaption>Personal branding logo</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Task 10: External links to HTML/CSS resources -->
+    <section class="section">
+        <h2>Useful HTML &amp; CSS Resources</h2>
+        <ul class="resources">
+            <li>
+                <a href="https://developer.mozilla.org/docs/Web/HTML"
+                   target="_blank" rel="noopener noreferrer">
+                    MDN Web Docs – HTML
+                </a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/docs/Web/CSS"
+                   target="_blank" rel="noopener noreferrer">
+                    MDN Web Docs – CSS
+                </a>
+            </li>
+            <li>
+                <a href="https://web.dev/learn/css/"
+                   target="_blank" rel="noopener noreferrer">
+                    web.dev – Learn CSS
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Task 11: Contact form -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form class="contact-form" action="#" method="post">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="name@example.com" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </section>
+
+    <!-- Task 12: Footer with name, institutional email, copyright -->
+    <footer class="site-footer">
+        <div class="container">
+            <small>
+                &copy; 2025 Aikoz Bazarbayeva ·
+                <a href="mailto:azmyba03@gmail.com">azmyba03@gmail.com</a> · All rights reserved.
+            </small>
+        </div>
+    </footer>
+
+    <!-- Task 19: Multiple-choice questions as comments in HTML -->
+    <!--
+        Q1: Which HTML element is used to define a navigation section?
+            a) <div>   b) <nav>   c) <section>
+        Answer: b) <nav>
+
+        Q2: Which CSS property changes the text color?
+            a) background-color   b) color   c) border-color
+        Answer: b) color
+
+        Q3: Which attribute opens a link in a new tab?
+            a) type   b) target   c) href
+        Answer: b) target (use target="_blank" with rel="noopener noreferrer")
+    -->
+</body>
+</html>
